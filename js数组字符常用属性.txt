@@ -1,0 +1,227 @@
+判断是否是空字符串
+$().trim().length==0
+
+页面跳转：
+location.href="search-result.html?msg="+msg
+或者
+location.assign("search-result.html?msg=" + msg)
+强制刷新
+location.reload（）
+
+将字符串以"名称"保存在history中（保存历史纪录）
+	localStorage.setItem("名称",字符串)
+将以”名称“保存下来的记录取出来
+	localStorage.getItem("名称")
+删除localStorage里面的数据
+	localStorage.removeItem("名称")
+
+
+运行：cd打开盘符
+          ren 替换
+          ipconfig  ip地址
+/* ctrl shift i ctrl shift p  full  截图 */
+
+html5中的：
+
+video属性：
+	controls	//控制器
+	loop	//循环次数
+	muted	//静音播放
+	source	//源文件
+	poster	//封面
+
+表单标签：
+	fieldset	//form表单边框
+	legend	//form表单边框标题
+表单属性：
+	placeholder	//占位符
+	contenteditable="true"	//盒子可编辑
+	multiple		//选择多个
+	autofocus		//自动获取焦点
+	autocomplete	//自动获取提交内容
+	required		//必须输入
+	pattern		//正则表达式验证
+
+
+dataset[""] 	//获取通过data-设置的属性  jquery中是data（）
+
+ 
+css中的：
+
+	transparent  	//透明
+	border-collapse:collapse  //相邻边框重合
+	outline  //input框高亮
+	linear-gradient	//线性渐变
+	radial-gradient	//径向渐变
+	transform-origin:25% top	//过渡变换中心
+	perspective:	//观察视距，使用之后使transform能够观察到3D效果
+	
+	animation-direction:alternate|reverse|normal	//交替运动|反向运动|正常，默认
+	animation-fill-mode:forwards|backwards|botn	//动画结束时停止|动画开始时保持停止状态
+	animation-play-state:running|pause	//开始|暂停
+
+	background-attachment:fixed	//背景吸附
+	background-origin:content-box|padding-box	//背景显示区域
+	background-clip:content-box|padding-box	//背景图片裁剪
+	background-size:cover|contain	//背景大小：顾宽不顾高|顾高不顾宽
+	
+弹性布局：父盒子：
+	display:flex	//弹性布局
+	flex-flow:warp colum	//flex-warp:warp|nowarp	//换行
+				//flex-direction:row|colum	//设置主轴：横轴（默认）|竖轴
+	justify-content:space-between|space-around|center|flex-start|flex-end	//主轴布局方式
+	align-items:center|flex-start|flex-end	//侧轴布局方式
+
+弹性布局：子盒子：
+	align-self:center|flex-start|flex-end	//单独在侧轴上的布局方式
+	flex：num		//子盒子占据父盒子的比例
+
+
+js中的：
+
+html5新增：
+	obj.classList.toggle()	//切换属性
+	obj.classList.contains()	//判断是否有指定样式	
+	obj.classList.item()	//按索引来获取样式
+	obj.classList.remove()		//移除
+	obj.classList.add()	//添加
+
+oninput事件
+
+window.onresize事件
+
+
+     数组内置对象方法
+        var arr=[]
+        arr.push()  在数组末尾添加元素
+        arr.unshift()   在数组最前面添加元素
+        arr.pop()   删除数组最后一个元素
+        arr.shift()     删除数组第一个元素
+        arr.splice()      从中间删除或者添加元素  
+                        //参数1:起始位置 默认0 包含起始元素
+                        //参数2:删除个数
+                        //参数3:追加元素
+        arr.indexOf()   元素在数组中的位置(下标)
+        arr.join(符号)  将数组按“符号”转换成字符串
+        arr.sort(function(){})  对数组的元素进行排序,可以传递排序规则函数
+
+        字符串常用方法
+        var str=''
+        str.indexOf()   字符在数组中的位置(下标)
+        str.charAt()    根据索引获取字符
+        str.substr()    截取字符串：参数1：起始位置 参数2：截取长度
+			
+        str.replace()   替换字符串
+        str.split() 将字符串按“”切割成数组
+        str.startsWith("xxx")	是否以xxx开头
+        str.endsWith("xxx")	是否以xxx结束
+        str.padStart("补全后字符串长度","需要补全字符串")	在str的前面补全字符串
+        str.padEnd("补全后字符串长度","需要补全字符串")	在str的后面补全字符串
+
+ var now =new Date()    //获得日期  构造函数
+  now.getFullYear()       // 获得年份
+  now.getMonth()         //获得月份  0~11
+  now.getDate()            //获得日期
+  now.getDay()             // 获得星期67
+  now.getHours()          // 获得当地时间
+  now.getUTCHours()    // 获得时区时间
+  now.getTime()          //获得从1970年1月1日至今的毫秒，时间戳u
+
+null==undefined      //两者值被认为相等
+“0”==0                 //转换成数字比较
+0==false                  //转换成数字比较
+“0”==false            //转换成数字比较
+  string.trim()    //可以去掉字符串  首尾 的空白字符串还有回车符等等无意义字符
+
+
+e.type  //当前触发事件类型
+e.target  //当前触发事件目标
+e.eventPhase //当前触发事件阶段
+e.currentTarget  //跟this一样
+
+e.stopPropagation() //阻止事件冒泡
+e.preventDefault() //阻止浏览器默认行为  return false
+
+e.clientX / e.clientY  //获取可视区域坐标
+e.pageX / e.pageY //获得整个页面坐标
+
+location.href   //浏览器的地址栏, 可以获取也可以赋值, 赋值的作用就是直接跳转
+history.back()  //后退
+history.forward()   //前进
+history.go()   //-1表示后退一级, 1表示前进一级
+navigator.userAgent  //获取版本信息
+
+offsetWidth   //包含元素border padding 内容的宽度
+offsetHeight  //包含元素border padding 内容的高度
+offsetParent  //距离自身最近并且带有定位(postion不为static的)的父元素, 逐层往上找, 直到body位置
+offsetLeft      //获取到offsetParent左侧的距离
+offsetTop      //获取到offsetParent顶部的距离
+
+scrollWidth	// 内容的宽度, 如果有溢出部分也会包含在内
+scrollHeight 	// 内容的高度, 如果有溢出部分也会包含在内
+scrollLeft		// 内容滚动出去的距离
+scrollTop		// 内容滚动出去的距离
+
+document.documentElement.scrollTop	//获取页面卷去的部分
+
+str.trim()     //去掉前后空格
+var formdata=new FormData()		//获取表单数据  键值对的格式
+
+location.search.split("=")	//获取地址栏中？后面的值，按=分割
+location.herf=“”	//跳转
+instanceOf  	//判断类型	使用没有（）
+
+firstli.cloneNode(true)	 //将第一个li克隆  firstli时获取到的元素
+父元素.insertBefore(需要插入的元素，位置)	//在位置之前插入
+
+
+jquery
+
+.width()	//获取元素内容宽度
+.innerWidth()	//获取元素内容宽度+padding宽渡
+.outerWidth(true)	//获取元素内容宽度+padding宽度+margin宽度
+
+.val(   )  	// 获取value值  有值的话就是设置value值
+.text(   )   	//获取标签内容 有值的话就设置text值
+
+eq(index) 	//匹配列表中的第index个元素（index 从 0 开始）
+gt(index) 	//匹配列表索引 大于 index 的元素
+lt(index) 	//匹配列表索引 小于 index 的元素
+$("ul li:lt(5):gt(2)")  //这里:lt(5):gt(2) 的顺序不能变，必须是lt在前，gt在后。
+
+data("page")	//获取data-page样式属性的数据
+
+
+.fileupload({
+	dataType:"json",
+	url:"",	//后台处理文件
+	done:function(e,data){
+
+	}
+
+})	//图片上传
+
+ajax中：
+	var xhr=new XMLHttpRequest()	//创建异步对象
+	xhr.open()		//请求行
+	xhr.setRequesrHeader()	//请求头
+	xhr.send()		//请求体
+	onreadystatechang	//状态改变事件
+	readyState==4	//异步对象响应状态
+	status==200	//服务器响应状态
+	xhr.responseText	//接收服务器数据
+
+	serialize()	//获取表单数据 		js中：var formdata=new FormData()
+
+json中：（数组或者对象，里面的数据是键值对的关系key：value并且key用引号）json是一种格式
+	
+为什么要用json：在渲染的时候需要对数据进行遍历，也就需要一个数组或者对象，而传递给localStorage的是一个字符串，而数组更加方便于记录数据，JSON.parse()和JSON.stringify()可以将数据在数组和字符串之间相互转换，所以先将数据存储在数组中通过JSON.stringify()转换成字符串传递给localStorage，再在获取localStorage数据时通过JSON.parse()转换成数组或者对象，方便循环遍历
+
+	php：
+		json.encode()	//将字符串转换成json格式字符串
+		json.decode()	//将json转换成数组或者对象
+	js：	
+		JSON.parse()	//将json格式字符串转换成json数组或者对象（结果是一个数组或者对象）
+		JSON.stringify()	//将json格式数组转换成json格式字符串（结果是一个字符串）
+
+ 
