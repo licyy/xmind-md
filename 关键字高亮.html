@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="content">
+        <p>天上的星星参北斗啊</p>
+        <p>地上的蛤蟆吃天鹅肉</p>
+    </div>
+    <input type="text" name="name" id="text">
+    <input type="button" value="light" id="light">
+
+
+    <script>
+        // 需求:根据输入框中的内容高亮显示
+        var text = document.getElementById("text")
+        var light = document.getElementById("light")
+
+
+        // //字符串切割的方法
+        // light.onclick = function () {
+        //     //获取输入字符
+        //     var key = text.value
+        //     //遍历所有字符
+        //     var content = document.getElementById("content").innerHTML
+        //     if (key.trim().length != 0) {
+        //         content = content.split(key).join(`<span style="color:red">${key}</span>`)
+        //         document.getElementById("content").innerHTML = content
+        //     }
+        // }
+
+        light.onclick = function () {
+            //获取输入字符
+            var key = text.value
+            //遍历所有字符
+            var content = document.getElementById("content").innerHTML
+            if (key.trim().length != 0) {
+                var reg=new RegExp(key,"g")
+                content=content.replace(reg,`<span style="color:red">${key}</span>`)
+                // console.log(content);
+                document.getElementById("content").innerHTML = content
+            }
+        }
+    </script>
+</body>
+
+</html>
